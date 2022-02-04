@@ -12,7 +12,7 @@ def show_map(ll_spn=None, map_type="map", add_params=None):
 
     if add_params:
         map_request += "&" + add_params
-    print(map_request)
+    # print(map_request)
     response = requests.get(map_request)
 
     if not response:
@@ -25,7 +25,7 @@ def show_map(ll_spn=None, map_type="map", add_params=None):
     map_file = "map.png"
     try:
         with open(map_file, "wb") as file:
-            print(response.content)
+            # print(response.content)
             file.write(response.content)
     except IOError as ex:
         print("Ошибка записи временного файла:", ex)
